@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Optional Subjects</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <form action="{{ url_for('process_results') }}">
+        <input type="text" name="level" value="{{ level }}" hidden>
+        <h1>Optional Subjects</h1>
+        <p>
+            Here are the compulsory subjects for Secondary {{ level }}.
+        </p>
+        <p>
+        <ul>
+            {% for row in compul_subjs %}
+            <li>
+                {{ row[0] }}
+            </li>
+            {% endfor %}
+        </ul>
+        </p>
+        <p>
+            Please select the Science subjects you take.
+        </p>
+        <p>
+        <ul>
+            {% for row in opt_sci_subjs %}
+            <li>
+                <input type="checkbox" name="opt_sci_subjs" id="{{ row[1] }}" value="{{ row[1] }}">
+                <label for="{{ row[1] }}">{{ row[0] }}</label>
+            </li>
+            {% endfor %}
+        </ul>
+        </p>
+        <p>
+            Please select the Humanities subjects you take.
+        </p>
+        <p>
+        <ul>
+            {% for row in opt_hum_subjs %}
+            <li>
+                <input type="checkbox" name="opt_hum_subjs" id="{{ row[1] }}" value="{{ row[1] }}">
+                <label for="{{ row[1] }}">{{ row[0] }}</label>
+            </li>
+            {% endfor %}
+        </ul>
+        </p>
+        <p>
+            <input type="submit" value="Submit">
+        </p>
+    </form>
+</body>
+
+</html>

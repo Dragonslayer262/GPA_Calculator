@@ -1,0 +1,16 @@
+Subject,Short,Category,Level,Compulsory
+English Language,el,Lang1,1234,T
+Higher Chinese Language,hcl,Lang2,1234,T
+Mathematics,maths,Maths,1234,T
+Biology,bio,Science,34,F
+Chemistry,chem,Science,34,F
+Computing,comp,Science,34,F
+Physics,phy,Science,34,F
+Science,sci,Science,12,T
+Geography,geo,Humanities,1234,F
+History,hist,Humanities,1234,F
+Singapore Studies,ss,Humanities,34,T
+English Literature,elit,Humanities,34,F
+Chinese Literature,clit,Humanities,34,F
+Bicultural Studies Programme,bsp,Humanities,34,F
+CID,cid,CID,1234,T

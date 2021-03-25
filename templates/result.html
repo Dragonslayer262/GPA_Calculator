@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GPA Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <h1>GPA Result</h1>
+    <p>Here is your GPA:</p>
+    <table border="1px" width="60%">
+        <tr>
+            <th>Subject</th>
+            <th>Score</th>
+            <th>Grade</th>
+            <th>GPA</th>
+        </tr>
+        {% for row in all_subjs %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[5] }}</td>
+            <td>{{ row[6] }}</td>
+            <td>{{ row[7] }}</td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <th>Overall GPA</th>
+            <td colspan="2"></td>
+            <th>{{ gpa }}</th>
+        </tr>
+    </table>
+</body>
+
+</html>
